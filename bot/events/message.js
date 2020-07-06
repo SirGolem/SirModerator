@@ -17,7 +17,7 @@ const event = async(client, message, db) => {
   }
   if (command.permissions) {
     if (!message.member.hasPermissions(command.permissions)) {
-      
+      message.channel.send(`${message.author.username} you do not have the right permissions! Permission required: \`${command.permissions.filter(perm => !message.member.hasPermission(perm)).join(",")}\``)
     }
   }
 }
