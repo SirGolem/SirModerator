@@ -4,7 +4,7 @@ const event = async(client, message, db) => {
   
   if (!message.content.startsWith(client.prefix)) return
   
-  let args = message.content.slice(client.prefix.length).trim().split(/ +g)
+  let args = message.content.slice(client.prefix.length).trim().split(/ +/g)
                                                                       
   let x = args.shift().toLowerCase()
   
@@ -20,4 +20,9 @@ const event = async(client, message, db) => {
       message.channel.send(`${message.author.username} you do not have the right permissions! Permission required: \`${command.permissions.filter(perm => !message.member.hasPermission(perm)).join(",")}\``)
     }
   }
+  
+  command.execute(client, message, args, db)
+  
 }
+
+module.exports = event
