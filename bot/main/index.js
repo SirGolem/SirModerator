@@ -18,4 +18,4 @@ client.on("ready", () => ReadyEvent(client,db))
 
 client.on("message", (message) => MessageEvent(client, message, db))
 
-clien.login("NzE5NjE4MDQzNTM3NTIyODEw.XwNDaA.6ErnXQvFOFHaGZ6w88t-ALq0ycw")
+client.login("NzE5NjE4MDQzNTM3NTIyODEw.XwNDaA.6ErnXQvFOFHaGZ6w88t-ALq0ycw")
